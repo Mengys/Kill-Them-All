@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "345669070589",
+    "project_id": "survivalio-19242",
+    "storage_bucket": "survivalio-19242.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345669070589:android:e1fb4b325ea6607efb1894",
+        "android_client_info": {
+          "package_name": "com.BearBobStudio.KillThemAll"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAltLHN83hoKeAI5KvbIr8mzB0dwugdl3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345669070589:android:c010de184962fdbefb1894",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.survivalio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAltLHN83hoKeAI5KvbIr8mzB0dwugdl3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
