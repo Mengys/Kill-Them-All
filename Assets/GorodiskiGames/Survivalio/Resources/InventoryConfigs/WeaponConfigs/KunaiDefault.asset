@@ -23,7 +23,7 @@ MonoBehaviour:
       Value: 1
     - Type: 1
       Value: 6
-  - Price: 250
+  - Price: 20
     Attributes:
     - Type: 0
       Value: 0.9

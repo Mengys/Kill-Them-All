@@ -1,0 +1,3 @@
+Build path: D:/Program Files/Unity/Projects/survivalio/Build/YGBuild
+Build number: 4
+PluginYG version: 2.004

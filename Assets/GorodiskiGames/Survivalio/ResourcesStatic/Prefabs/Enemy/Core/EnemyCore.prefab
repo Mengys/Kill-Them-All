@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 1612559721875975495}
   - component: {fileID: 4386950932749739471}
   - component: {fileID: 4675079783551774329}
+  - component: {fileID: 5545120762621036584}
   m_Layer: 0
   m_Name: EnemyCore
   m_TagString: Untagged
@@ -603,6 +604,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5545120762621036584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022292672630762317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1f6c58848d4bf43b6f2230f4b992fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 4386950932749739471}
 --- !u!1 &4292750984690072854
 GameObject:
   m_ObjectHideFlags: 0

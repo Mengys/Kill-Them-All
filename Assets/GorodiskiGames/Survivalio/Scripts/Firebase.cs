@@ -1,11 +1,14 @@
 using DG.Tweening.Core.Easing;
+#if !UNITY_WEBGL 
 using Firebase.Analytics;
 using Firebase.Extensions;
+#endif
 using UnityEngine;
 
 public class FirebaseInitializer : MonoBehaviour {
-
+#if !UNITY_WEBGL
     [HideInInspector] public Firebase.FirebaseApp App;
+#endif
     public static FirebaseInitializer Instance { get; private set; }
 
     private bool _isInitialized = false;
@@ -18,7 +21,7 @@ public class FirebaseInitializer : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
+#if !UNITY_WEBGL
     void Start() {
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
             var dependencyStatus = task.Result;
@@ -35,8 +38,11 @@ public class FirebaseInitializer : MonoBehaviour {
                 // Firebase Unity SDK is not safe to use here.
             }
         });
-    }
 
+    }
+#endif
+
+#if !UNITY_WEBGL
     private void OnApplicationPause(bool pause) {
         if (!_isInitialized) return;
         Debug.Log("SendEventGamePause");
@@ -48,8 +54,10 @@ public class FirebaseInitializer : MonoBehaviour {
             new Parameter("Pause", pause.ToString())
         );
     }
+#endif
 
     public void LogLevelStart(int level, int attempt) {
+#if !UNITY_WEBGL
         if (!_isInitialized) return;
         FirebaseAnalytics.LogEvent(
             "LevelStart",
@@ -57,9 +65,11 @@ public class FirebaseInitializer : MonoBehaviour {
             new Parameter("Time", Time.time),
             new Parameter("Time", attempt)
         );
+#endif
     }
 
     public void LogLevelEnd(bool isWin, int level, float startTime) {
+#if !UNITY_WEBGL
         if (!_isInitialized) return;
         FirebaseAnalytics.LogEvent(
             "LevelEnd",
@@ -67,5 +77,6 @@ public class FirebaseInitializer : MonoBehaviour {
             new Parameter("IsWin", isWin.ToString()),
             new Parameter("Time", Time.time - startTime)
         );
+#endif
     }
 }

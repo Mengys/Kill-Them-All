@@ -58,7 +58,7 @@ namespace Game.UI.Hud
             DOTween.Kill(this);
         }
 
-        private void OnButtonClick()
+        public void OnButtonClick()
         {
             ON_CLICK?.Invoke(Model.Type);
         }
